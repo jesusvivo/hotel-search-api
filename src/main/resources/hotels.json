@@ -1,0 +1,49 @@
+[
+  {
+    "id": "1",
+    "name": "Hotel A",
+    "description": "A great hotel in Madrid",
+    "location": {
+      "id": "MAD",
+      "name": "Madrid"
+    },
+    "total_price": 500,
+    "image": "https://example.com/hotelA.jpg",
+    "reviews": [
+      {
+        "id": "r1",
+        "rating": 4,
+        "comment": "Great stay!"
+      },
+      {
+        "id": "r2",
+        "rating": 5,
+        "comment": "Excellent service!"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Hotel B",
+    "description": "A luxury hotel in London",
+    "location": {
+      "id": "LDN",
+      "name": "London"
+    },
+    "total_price": 700,
+    "image": "https://example.com/hotelB.jpg",
+    "reviews": [
+      {
+        "id": "r3",
+        "rating": 3,
+        "comment": "Average experience."
+      },
+      {
+        "id": "r4",
+        "rating": 4,
+        "comment": "Nice rooms."
+      }
+    ]
+  }
+]
+

@@ -1,5 +1,7 @@
 package org.jvc.hotelsearch.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.List;
 
 public class Hotel {
@@ -7,9 +9,11 @@ public class Hotel {
     private String name;
     private String description;
     private Location location;
+    @JsonProperty("total_price")
     private int totalPrice;
     private String image;
     private List<Review> reviews;
+    @JsonProperty("review_average")
     private double reviewAverage;
 
     public Hotel() {
