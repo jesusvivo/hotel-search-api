@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "name": "Hotel A",
     "description": "A great hotel in Madrid",
     "location": {
@@ -11,19 +11,19 @@
     "image": "https://example.com/hotelA.jpg",
     "reviews": [
       {
-        "id": "r1",
+        "id": 1,
         "rating": 4,
         "comment": "Great stay!"
       },
       {
-        "id": "r2",
+        "id": 2,
         "rating": 5,
         "comment": "Excellent service!"
       }
     ]
   },
   {
-    "id": "2",
+    "id": 2,
     "name": "Hotel B",
     "description": "A luxury hotel in London",
     "location": {
@@ -34,12 +34,12 @@
     "image": "https://example.com/hotelB.jpg",
     "reviews": [
       {
-        "id": "r3",
+        "id": 3,
         "rating": 3,
         "comment": "Average experience."
       },
       {
-        "id": "r4",
+        "id": 4,
         "rating": 4,
         "comment": "Nice rooms."
       }

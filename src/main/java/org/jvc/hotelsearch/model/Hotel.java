@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
 public class Hotel {
-    private String id;
+    private int id;
     private String name;
     private String description;
     private Location location;
@@ -19,11 +19,11 @@ public class Hotel {
     public Hotel() {
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

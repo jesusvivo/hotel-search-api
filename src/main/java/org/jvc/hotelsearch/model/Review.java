@@ -1,18 +1,18 @@
 package org.jvc.hotelsearch.model;
 
 public class Review {
-    private String id;
+    private int id;
     private int rating;
     private String comment;
 
     public Review() {
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
