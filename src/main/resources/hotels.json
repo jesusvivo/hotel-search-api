@@ -4,7 +4,7 @@
     "name": "Hotel A",
     "description": "A great hotel in Madrid",
     "location": {
-      "id": "MAD",
+      "id": 1,
       "name": "Madrid"
     },
     "total_price": 500,
@@ -27,7 +27,7 @@
     "name": "Hotel B",
     "description": "A luxury hotel in London",
     "location": {
-      "id": "LDN",
+      "id": 2,
       "name": "London"
     },
     "total_price": 700,

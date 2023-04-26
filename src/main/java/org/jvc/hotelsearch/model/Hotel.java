@@ -2,6 +2,7 @@ package org.jvc.hotelsearch.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Hotel {
@@ -17,6 +18,17 @@ public class Hotel {
     private double reviewAverage;
 
     public Hotel() {
+
+    }
+
+    public Hotel(int id, String name, String description, Location location, int totalPrice) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.location = location;
+        this.totalPrice = totalPrice;
+        this.image = "";
+        this.reviews = new ArrayList<>();
     }
 
     public int getId() {

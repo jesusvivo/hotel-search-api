@@ -1,17 +1,23 @@
 package org.jvc.hotelsearch.model;
 
 public class Location {
-    private String id;
+    private int id;
     private String name;
 
     public Location() {
+
     }
 
-    public String getId() {
+    public Location(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
