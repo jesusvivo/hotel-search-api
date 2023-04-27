@@ -1,5 +1,7 @@
 package org.jvc.hotelsearch.controller;
 
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Size;
 import org.jvc.hotelsearch.model.Hotel;
 import org.jvc.hotelsearch.service.HotelService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,15 +15,20 @@ import java.util.List;
 
 @RestController
 public class HotelController {
-    @Autowired
+
     private HotelService hotelService;
+
+    @Autowired
+    public HotelController(HotelService hotelService) {
+        this.hotelService = hotelService;
+    }
 
     @GetMapping("/search")
     public List<Hotel> search(
-            @RequestParam String location,
-            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate checkin_date,
-            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate checkout_date,
-            @RequestParam List<Integer> price_range) {
-        return hotelService.search(location, checkin_date, checkout_date, price_range);
+            @RequestParam @NotEmpty String location,
+            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate checkInDate,
+            @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate checkOutDate,
+            @RequestParam @Size(min = 2, max = 2) List<Integer> priceRange) {
+        return hotelService.search(location, checkInDate, checkOutDate, priceRange);
     }
 }

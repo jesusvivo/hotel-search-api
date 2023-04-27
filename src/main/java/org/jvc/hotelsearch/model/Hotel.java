@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Hotel {
     private int id;
@@ -30,6 +31,24 @@ public class Hotel {
         this.image = "";
         this.reviews = new ArrayList<>();
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Hotel hotel = (Hotel) o;
+        return id == hotel.id &&
+                totalPrice == hotel.totalPrice &&
+                Objects.equals(name, hotel.name) &&
+                Objects.equals(description, hotel.description) &&
+                Objects.equals(location, hotel.location);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, description, location, totalPrice);
+    }
+
 
     public int getId() {
         return id;
